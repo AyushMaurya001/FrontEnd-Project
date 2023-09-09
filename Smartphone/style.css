@@ -1,0 +1,131 @@
+@font-face {
+    font-family: gilroy;
+    src: url(font/Gilroy-Medium.ttf);
+}
+*{
+    font-family: gilroy;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(90, 81, 81);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+#nav{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav a{
+    margin: 40px;
+}
+#maincenter{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mainimg img{
+    height: 74%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.608);
+}
+.backtext::-webkit-scrollbar{
+    display: none;
+}
+.backtext{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.backtext h1{
+    margin: 0px 10px;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+#backtext2 h1{
+    -webkit-text-stroke: .1px rgba(0, 0, 0, 0.606);
+    color: transparent;
+    z-index: 2;
+}
+#backtext1 h1{
+    animation-name: scroll;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#backtext2 h1{
+    animation-name: scroll;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#backtext3 h1{
+    animation-name: scroll;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#overlaytext{
+    z-index: 2;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.608);
+}
+#footer{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer a, p{
+    margin: 0 40px;
+    text-align: center;
+    display: inline-block;
+}
+#nav a{
+    text-align: center;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-400%);
+    }
+}
+@media (max-width: 650px) {
+    
+#overlaytext{
+    top: 15%;
+    left: 0;
+    transform: translate(0,0);
+}
+
+}
